@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `crud` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `mobile` varchar(20) NOT NULL,

@@ -92,6 +92,10 @@
 
   <!-- Funciones JAVASCRIPT -->
   <script>
+    //Mostrar datos en la tabla
+    $(document).ready(function(){
+      displayData();
+    });
 
     function displayData(){
       let displayData = "true";
@@ -108,7 +112,6 @@
       });
 
     }
-
     // Obtener datos del formulario
     function addUser() {
       let nameAdd = $('#completename').val();
