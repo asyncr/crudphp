@@ -72,6 +72,11 @@
     </button>
 
 
+    <!-- Table -->
+    <div id="displayDataTable">
+      
+    </div>
+
   </div>
  
 
@@ -87,6 +92,23 @@
 
   <!-- Funciones JAVASCRIPT -->
   <script>
+
+    function displayData(){
+      let displayData = "true";
+      $.ajax({
+        url: 'display.php',
+        type:'post',
+        data:{
+          displaySend: displayData
+        },
+        success: function(data,status){
+          // JQUERY
+          $('#displayDataTable').html(data);
+        }
+      });
+
+    }
+
     // Obtener datos del formulario
     function addUser() {
       let nameAdd = $('#completename').val();
@@ -105,7 +127,7 @@
           placeSend:placeAdd
         },
         success:function(data,status){
-          consol.log(status);
+          displayData();
         }
       });
     }
