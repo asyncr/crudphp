@@ -102,7 +102,7 @@
 
       <!-- Boton Formulario Agregar Usuarios -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-dark"  onclick="GetDetails()">Actualizar</button>
+        <button type="button" class="btn btn-dark"  onclick="updateDetails()">Actualizar</button>
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         <input type="hidden" id="hiddendata"/>
       </div>
@@ -169,6 +169,7 @@
           placeSend:placeAdd
         },
         success:function(data,status){
+          $('#completeModal').modal('hide');
           displayData();
         }
       });
@@ -198,6 +199,26 @@
             $('#updateplace').val(userid.place);
           });
         $('#updateModal').modal("show");
+    }
+
+    function updateDetails(){
+      let updatename = $('#updatename').val();
+      let updateemail = $('#updateemail').val();
+      let updatemobile = $('#updatemobile').val();
+      let updateplace = $('#updateplace').val();
+      let hiddendata = $('#hiddendata').val();
+
+      $.post("update.php",{
+        updatename : updatename,
+        updateemail : updateemail,
+        updatemobile : updatemobile,
+        updateplace : updateplace,
+        hiddendata : hiddendata
+      },
+      function(data,status){
+        $('#updateModal').modal('hide');
+        displayData();
+      });
     }
   </script>
 

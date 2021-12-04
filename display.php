@@ -29,7 +29,7 @@
 			$place  = $row['place'];
 
 			$table.= '<tr>
-			<td scope="row"> '.$number.' </th>
+			<td scope="row"> '.$id.' </th>
 			<td>'.$nombre.'</td>
 			<td>'.$email.'</td>
 			<td>'.$mobile.'</td>
