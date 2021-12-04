@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-12-2021 a las 22:09:35
+-- Tiempo de generación: 04-12-2021 a las 08:25:52
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -28,19 +28,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `crud` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `mobile` varchar(20) NOT NULL,
   `place` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `crud`
---
-
-INSERT INTO `crud` (`id`, `nombre`, `email`, `mobile`, `place`) VALUES
-(1, 'Michelle Itai Cruz Ilescas', 'michelleitai@gmail.com', '9512434999', 'Programadora');
 
 --
 -- Índices para tablas volcadas
@@ -60,7 +53,7 @@ ALTER TABLE `crud`
 -- AUTO_INCREMENT de la tabla `crud`
 --
 ALTER TABLE `crud`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

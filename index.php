@@ -198,6 +198,7 @@
             $('#updatemobile').val(userid.mobile);
             $('#updateplace').val(userid.place);
           });
+        
         $('#updateModal').modal("show");
     }
 
@@ -220,6 +221,7 @@
         displayData();
       });
     }
+    
   </script>
 
 </body>

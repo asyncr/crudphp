@@ -11,8 +11,20 @@
 		}
 		echo json_encode($response);
 	}else{
-		echo '<scrip>console.log(error)</scrip>';
 		$response['status']=200;
 		$response['message']="Invalid or data not found";
+	}
+
+	if(isset($_POST['hiddendata'])){
+		$uniqueid=$_POST['hiddendata'];
+		$name=$_POST['updatename'];
+		$email=$_POST['updateemail'];
+		$mobile=$_POST['updatemobile'];
+		$place=$_POST['updateplace'];
+		
+		$sql = "UPDATE crud SET nombre='$name', email='$email',mobile='$mobile',place='$place' WHERE id=$uniqueid" ;
+
+		$result = mysqli_query($con,$sql);
+
 	}
 ?>
